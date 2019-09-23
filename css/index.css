@@ -184,6 +184,8 @@ html {
 }
 html,
 body {
+  color: #1b1c1d;
+  overflow: hidden;
   font-family: 'Roboto', sans-serif;
 }
 h1,
@@ -215,116 +217,114 @@ img {
 }
 .container {
   max-width: 800px;
+  height: 100%;
   width: 100%;
   margin: 0 auto;
 }
 #main-header {
   height: 50px;
-  background: #ffffff;
+  background-color: #ffffff;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
 }
 #main-header .container {
+  padding: 0 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 #main-header .container .logo {
-  color: inherit;
-  font-weight: bold;
   font-size: 2rem;
   margin-right: 2rem;
-  text-decoration: none;
+  cursor: pointer;
 }
-@media (max-width: 675px) {
+@media (max-width: 600px) {
   #main-header .container .logo {
     margin-left: auto;
   }
 }
 #main-header .container .links {
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 100%;
-  margin-right: auto;
-}
-@media (max-width: 675px) {
-  #main-header .container .links {
-    display: none;
-  }
 }
 #main-header .container .links a {
+  color: inherit;
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 100%;
-  color: inherit;
   font-size: 1.4rem;
   text-decoration: none;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   border-left: 1px solid #dededf;
 }
 #main-header .container .links a:last-child {
   border-right: 1px solid #dededf;
 }
+@media (max-width: 600px) {
+  #main-header .container .links {
+    display: none;
+  }
+}
+#main-header .container .buttons {
+  margin-left: auto;
+}
 #main-header .container .buttons a {
   color: inherit;
   font-size: 1.4rem;
-  text-decoration: none;
   margin-right: 2rem;
-}
-@media (max-width: 675px) {
-  #main-header .container .buttons a {
-    display: none;
-  }
+  text-decoration: none;
 }
 #main-header .container .buttons a:last-child {
   color: white;
   padding: 0.5rem 1.5rem;
   margin-right: 0rem;
   background-color: #2987cd;
+  margin-right: 0;
 }
-#main-header .container .burger-menu {
+@media (max-width: 600px) {
+  #main-header .container .buttons {
+    display: none;
+  }
+}
+#main-header .container #burger-menu {
   font-size: 2rem;
   display: none;
-}
-#main-header .container .burger-menu:hover {
   cursor: pointer;
 }
-@media (max-width: 675px) {
-  #main-header .container .burger-menu {
+@media (max-width: 600px) {
+  #main-header .container #burger-menu {
+    display: flex;
     margin-left: auto;
-    display: inline-block;
   }
 }
 #mobile-menu {
-  width: 100%;
-  height: calc(100% - 50px);
   position: absolute;
+  width: 100%;
+  height: 100%;
   top: 50px;
-  background-color: whitesmoke;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  background-color: whitesmoke;
   display: none;
 }
-@media (max-width: 675px) {
+@media (max-width: 600px) {
   #mobile-menu {
     display: flex;
   }
 }
-#mobile-menu nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#mobile-menu nav a {
+#mobile-menu a {
   color: inherit;
   font-size: 2rem;
   text-decoration: none;
   margin-bottom: 3rem;
 }
-#mobile-menu nav a:last-child {
+#mobile-menu a:last-child {
   margin-bottom: 0;
 }
 body {
@@ -348,6 +348,12 @@ body .container-main #one {
   transform: translate(-50%, -50%);
   top: 25%;
 }
+@media (max-width: 600px) {
+  body .container-main #one {
+    top: 70%;
+    font-size: 2.7rem;
+  }
+}
 body .container-main #two {
   color: whitesmoke;
   padding-top: 20px;
@@ -359,6 +365,12 @@ body .container-main #two {
   transform: translate(-50%, -50%);
   top: 30%;
 }
+@media (max-width: 600px) {
+  body .container-main #two {
+    top: 80%;
+    font-size: 2.7rem;
+  }
+}
 body .container-main .btns {
   display: flex;
   flex-direction: row;
@@ -368,6 +380,11 @@ body .container-main .btns {
   transform: translate(-50%, -50%);
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 600px) {
+  body .container-main .btns {
+    top: 100%;
+  }
 }
 body .container-main .btns button {
   margin-right: 1.8rem;
