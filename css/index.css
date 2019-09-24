@@ -127,7 +127,7 @@ table {
   border-spacing: 0;
 }
 * {
-  Eric-Figueroabox-sizing: border-box;
+  box-sizing: border-box;
 }
 html {
   font-size: 62.5%;
@@ -314,9 +314,6 @@ img {
   display: none;
 }
 @media (max-width: 600px) {
-  #mobile-menu {
-    display: flex;
-  }
 }
 #mobile-menu a {
   color: inherit;
